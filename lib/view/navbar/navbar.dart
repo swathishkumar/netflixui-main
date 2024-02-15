@@ -2,7 +2,9 @@
 
 import 'package:flutter/material.dart';
 import 'package:netflixui/utils/colorsdb.dart';
+import 'package:netflixui/view/comingsoonscreen/comingsoonscreen.dart';
 import 'package:netflixui/view/homescreen/homescreen.dart';
+import 'package:netflixui/view/searchscreen/searchscreen.dart';
 
 class NavBar extends StatefulWidget {
   const NavBar({super.key});
@@ -13,7 +15,11 @@ class NavBar extends StatefulWidget {
 
 class _NavBarState extends State<NavBar> {
   int selectedindex = 0;
-  List screens = [Homescreen()]; //map of screens
+  List screens = [
+    Homescreen(),
+    Searchscreen(),
+    ComingsoonScreen()
+  ]; //map of screens
   @override
   Widget build(BuildContext context) {
     return Scaffold(
