@@ -3,7 +3,9 @@
 import 'package:flutter/material.dart';
 import 'package:netflixui/utils/colorsdb.dart';
 import 'package:netflixui/view/comingsoonscreen/comingsoonscreen.dart';
+import 'package:netflixui/view/downloadingscreen/downloadingscreen.dart';
 import 'package:netflixui/view/homescreen/homescreen.dart';
+import 'package:netflixui/view/morescreen/morescreen.dart';
 import 'package:netflixui/view/searchscreen/searchscreen.dart';
 
 class NavBar extends StatefulWidget {
@@ -18,7 +20,9 @@ class _NavBarState extends State<NavBar> {
   List screens = [
     Homescreen(),
     Searchscreen(),
-    ComingsoonScreen()
+    ComingsoonScreen(),
+    DownloadScreen(),
+    MoreScreen()
   ]; //map of screens
   @override
   Widget build(BuildContext context) {

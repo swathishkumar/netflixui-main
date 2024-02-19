@@ -8,4 +8,5 @@ class Clrbase {
 
   static Color nwhite = Color(0xffffffff);
   static Color ndarkred = Color(0xff831010);
+  static Color ndarkgrey = Color(0xff222222);
 }

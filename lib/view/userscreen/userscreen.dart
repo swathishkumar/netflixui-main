@@ -1,7 +1,10 @@
+// ignore_for_file: prefer_const_constructors
+
 import 'package:flutter/material.dart';
 import 'package:netflixui/utils/colorsdb.dart';
 import 'package:netflixui/utils/db.dart';
 import 'package:netflixui/utils/imageconstant.dart';
+import 'package:netflixui/view/navbar/navbar.dart';
 
 class Userscreen extends StatefulWidget {
   const Userscreen({super.key});
@@ -43,7 +46,13 @@ class _UserscreenState extends State<Userscreen> {
           itemBuilder: (context, index) => index < DbData.usernameImages.length
               ? InkWell(
                   onTap: () {
-                    setState(() {});
+                    setState(() {
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => NavBar(),
+                          ));
+                    });
                   },
                   child: Column(
                     children: [
@@ -52,7 +61,6 @@ class _UserscreenState extends State<Userscreen> {
                         width: 100,
                         decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(10),
-                            color: Colors.amber,
                             image: DecorationImage(
                                 image: AssetImage(
                                     DbData.usernameImages[index]["image"]!),
